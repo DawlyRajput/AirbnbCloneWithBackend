@@ -1,0 +1,27 @@
+<%- include('../partials/head') %>
+<body>
+ <%- include('../partials/nav') %>
+
+ 
+  <main>
+  <h2>Here are our favouites homes:</h2>
+  <div class="card-container">
+    <% favouriteHomes.forEach(function(home) { %>
+      <div class="card">
+        <img src="https://media.istockphoto.com/id/2155335325/photo/single-family-home-with-clouds.jpg?s=612x612&w=is&k=20&c=WfKMv7DkjueEJEAnJv26rAlmt2D1O_x80tYLnG9G2c0=" alt="<%= home.housename %>" class="card-img">
+        <div class="card-content">
+          <h3><%= home.housename %></h3>
+          <p>Price: $<%= home.price %></p>
+          <p>Location: <%= home.location %></p>
+          <p>Rating: <%= home.rating %> ⭐</p>
+           <!-- <div class="btn">
+              <button> Book</button>
+          </div> -->
+        </div>
+      </div>
+    <% }); %> 
+  
+  <!-- </div>
+</main>
+</body>
+</html>

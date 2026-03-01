@@ -1,0 +1,51 @@
+<%- include('../partials/head', { pagetitle: 'Log in' }) %>
+<body class="bg-gray-100">
+  <%- include('../partials/nav') %>
+
+  <main class="min-h-screen flex items-center justify-center">
+    <div class="bg-white w-full max-w-md rounded-xl shadow-lg p-6">
+      
+      <h2 class="text-3xl bg-white font-semibold mb-6 text-center">
+        Log in to Airbnb
+      </h2>
+
+      <form action="/login" method="POST" class="space-y-4">
+        
+        <div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-rose-500"
+          />
+        </div>
+
+        <div>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-rose-500"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-rose-500 text-white py-3 rounded-lg font-semibold hover:bg-rose-600 transition"
+        >
+          Log in
+        </button>
+
+      </form>
+
+      <p class="text-center text-sm text-gray-500 mt-4">
+        Don’t have an account?
+        <a href="/signup" class="text-rose-500 font-medium">Sign up</a>
+      </p>
+
+    </div>
+  </main>
+</body>
+</html>

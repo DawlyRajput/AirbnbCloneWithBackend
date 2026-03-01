@@ -1,0 +1,242 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+header {
+  background-color: #ff5a5f;
+  padding: 1rem 2rem;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #e54e52;
+}
+
+main {
+  text-align: center;
+   list-style: none;
+  padding: 5rem 2rem;
+  background-color: rgb(194, 200, 192);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin: 2rem auto;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+main h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+}
+
+ul.abc {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li.listing {
+  padding: 15px 20px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  border-left: 6px solid #4CAF50;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+li.listing:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+
+/* home add */
+   input[type="text"], input[type="submit"] {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      padding: 12px 15px;
+      margin: 10px auto;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input[type="text"]:focus {
+      border-color: #007BFF;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+      outline: none;
+    }
+
+    input[type="submit"] {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+       width: 250px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      transition: transform 0.2s ease; 
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      text-align: left;
+      padding: 20px;
+
+    }
+
+    .card-content h3 {
+      margin: 0 0 10px;
+    }
+
+    .card-content p {
+      margin: 5px 0;
+    }  
+   
+
+    /* General layout */
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+.home-details {
+    max-width: 1200px;
+    margin: 60px auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.home-details h2 {
+    text-align: center;
+    color: #ef4444; /* Tailwind's red-500 */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Grid layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Image styling */
+.image-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Info section */
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info-block h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.info-block p {
+    color: #4b5563; /* Tailwind's gray-600 */
+    font-size: 1rem;
+}
+
+/* Price styling */
+.price {
+    color: #10b981; /* Tailwind's green-600 */
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Rating */
+.rating {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.rating .star {
+    color: #fbbf24; /* Tailwind's yellow-400 */
+    font-size: 1.5rem;
+    margin-right: 8px;
+}
