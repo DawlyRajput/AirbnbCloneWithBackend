@@ -1,10 +1,11 @@
 //external module
+require("dotenv").config();
  const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const MongoDBStore=require('connect-mongodb-session')(session);
 
- const MONGODB_URI = "mongodb+srv://dawlyraj123_db_user:dawly123@cluster0.vaf8sq4.mongodb.net/airbnb?appName=Cluster0"
+
 
 
 // local module
@@ -28,7 +29,7 @@ app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 const store = new MongoDBStore({
-  uri:MONGODB_URI,
+  uri:process.env.MONGODB_URI,
   collection:'session'
 })
 
@@ -83,7 +84,7 @@ app.use(errorsController.pageNotFound);
 const PORT = 3001;
 
 mongoose
-  .connect(MONGODB_URI)
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("Connected to database");
     app.listen(PORT, () => {
